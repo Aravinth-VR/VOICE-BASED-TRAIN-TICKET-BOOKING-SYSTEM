@@ -1,0 +1,20 @@
+--- app.py
++++ app.py
+@@ -608,7 +608,7 @@
+                     
+                     # Force a rerun to immediately update the UI
+                     time.sleep(1)
+-                    st.rerun()
++
+                 else:
+                     display_text_as_voice("Error updating ticket. Please try again.")
+                     
+@@ -799,7 +799,7 @@
+                     
+                     # Force a rerun to immediately update the UI
+                     time.sleep(1)
+-                    st.rerun()
++
+                 else:
+                     display_text_as_voice("Error cancelling ticket. Please try again.")
+                     

@@ -1,0 +1,26 @@
+--- app.py
++++ app.py
+@@ -859,6 +859,11 @@
+                     ticket_info = f"Found ticket ID {ticket['id']} for {ticket['name']}, age {ticket['age']}, gender {ticket['gender']}, " + \
+                                 f"from {ticket['source']} to {ticket['destination']}{travel_date_str}, booked on {ticket['booking_time']}"
+                     display_text_as_voice(ticket_info)
++                    
++                    # Show ticket download option
++                    download_link = get_ticket_download_link(ticket)
++                    st.markdown(download_link, unsafe_allow_html=True)
++                    display_text_as_voice("You can download your ticket as a PDF file using the download link on the screen.")
+                     
+                     # Reset state
+                     st.session_state.current_operation = None
+@@ -997,6 +1002,11 @@
+                     ticket_info = f"Found ticket ID {ticket['id']} for {ticket['name']}, age {ticket['age']}, gender {ticket['gender']}, " + \
+                                 f"from {ticket['source']} to {ticket['destination']}{travel_date_str}, booked on {ticket['booking_time']}"
+                     display_text_as_voice(ticket_info)
++                    
++                    # Show ticket download option
++                    download_link = get_ticket_download_link(ticket)
++                    st.markdown(download_link, unsafe_allow_html=True)
++                    display_text_as_voice("You can download your ticket as a PDF file using the download link on the screen.")
+                     
+                     # Reset state
+                     st.session_state.current_operation = None
